@@ -14,10 +14,10 @@ app.get("/", (req, res) => {
   res.send("Hello, Subscription Tracker API!");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async() => {
   console.log(`Server is running on port ${PORT}`);
-});
 
-connectToDatabase();
+  await connectToDatabase();
+});
 
 export default app;
