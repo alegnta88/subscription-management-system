@@ -3,6 +3,7 @@ import { PORT } from "./config/env.js";
 import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.routes.js";
 import subscriptionRouter from "./routes/subscription.routes.js";
+import connectToDatabase from "./database/mongodb.js";
 
 const app = express();
 app.use("/api/v1/auth", authRouter);
@@ -16,5 +17,7 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+connectToDatabase();
 
 export default app;
