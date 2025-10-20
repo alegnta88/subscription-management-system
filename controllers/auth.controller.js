@@ -3,6 +3,8 @@ import bcrypt from 'bcryptjs';
 import User from '../models/user.model.js';
 import jwt from 'jsonwebtoken';
 
+import { JWT_EXPIRES_IN } from '../config/env.js';
+
 export const signUp = async (req, res, next) => {
   const session = await mongoose.startSession();
   session.startTransaction();
