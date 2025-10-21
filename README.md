@@ -41,7 +41,7 @@ npm install
 
 Create a `.env.development.local` file in the root directory:
 ```env
-PORT=3000
+PORT=5500
 JWT_SECRET=your_jwt_secret_key_here
 ARCJET_KEY=your_arcjet_api_key_here
 DATABASE_URL=your_database_connection_string
@@ -50,7 +50,7 @@ NODE_ENV=development
 
 For production, create `.env.production.local`:
 ```env
-PORT=3000
+PORT=5500
 JWT_SECRET=your_production_jwt_secret
 ARCJET_KEY=your_production_arcjet_key
 DATABASE_URL=your_production_database_url
